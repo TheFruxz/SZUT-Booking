@@ -24,13 +24,25 @@ repositories {
 }
 
 dependencies {
+
+	// KTOR
 	implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
 	implementation("io.ktor:ktor-server-sessions-jvm:$ktor_version")
 	implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
 	implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
 	implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
 	implementation("ch.qos.logback:logback-classic:$logback_version")
+
+	// JetBrains Exposed
+	implementation("org.jetbrains.exposed:exposed-core:0.39.2")
+	implementation("org.jetbrains.exposed:exposed-dao:0.39.2")
+	implementation("org.jetbrains.exposed:exposed-jdbc:0.39.2")
+
+	// MoltenKT
 	implementation("com.github.TheFruxz.MoltenKT:moltenkt-core:1.0-PRE-17")
+
+	// Test
 	testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
 	testImplementation(kotlin("test-junit", kotlin_version))
+
 }
