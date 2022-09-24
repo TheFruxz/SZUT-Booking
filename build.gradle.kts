@@ -6,7 +6,7 @@ plugins {
 	application
 	kotlin("jvm") version "1.7.10"
 	id("io.ktor.plugin") version "2.1.1"
-	id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10"
+	kotlin("plugin.serialization") version "1.7.10"
 }
 
 group = "de.szut"
@@ -20,6 +20,7 @@ application {
 
 repositories {
 	mavenCentral()
+	maven("https://jitpack.io")
 }
 
 dependencies {
@@ -29,6 +30,7 @@ dependencies {
 	implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
 	implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
 	implementation("ch.qos.logback:logback-classic:$logback_version")
+	implementation("com.github.TheFruxz.MoltenKT:moltenkt-core:1.0-PRE-17")
 	testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+	testImplementation(kotlin("test-junit", kotlin_version))
 }

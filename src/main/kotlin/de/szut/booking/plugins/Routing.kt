@@ -1,4 +1,4 @@
-package de.szut.plugins
+package de.szut.booking.plugins
 
 import io.ktor.server.routing.*
 import io.ktor.http.*

@@ -1,4 +1,4 @@
-package de.szut.plugins
+package de.szut.booking.plugins
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.plugins.contentnegotiation.*

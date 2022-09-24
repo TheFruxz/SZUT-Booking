@@ -1,5 +1,6 @@
-package de.szut
+package de.szut.booking
 
+import de.szut.booking.plugins.configureRouting
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.sessions.*
