@@ -1,5 +1,6 @@
 package de.szut.booking.plugins
 
+import de.moltenKt.core.extension.data.jsonBase
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.application.*
@@ -9,7 +10,7 @@ import io.ktor.server.routing.*
 
 fun Application.configureSerialization() {
 	install(ContentNegotiation) {
-		json()
+		json(jsonBase)
 	}
 
 	routing {

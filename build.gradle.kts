@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
@@ -41,8 +43,20 @@ dependencies {
 	// MoltenKT
 	implementation("com.github.TheFruxz.MoltenKT:moltenkt-core:1.0-PRE-17")
 
+	implementation("mysql:mysql-connector-java:8.0.30")
+
 	// Test
 	testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
 	testImplementation(kotlin("test-junit", kotlin_version))
+
+	implementation("com.h2database:h2:2.1.214")
+
+}
+
+tasks {
+
+	withType<KotlinCompile> {
+		kotlinOptions.jvmTarget = "17"
+	}
 
 }
